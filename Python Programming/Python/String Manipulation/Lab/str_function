@@ -1,0 +1,27 @@
+s = "hello tops technologies"
+
+print("Upper:", s.upper())
+print("Lower:", s.lower())
+print("Title:", s.title())
+print("Capitalize:", s.capitalize())
+print("Length:", len(s))
+print("Count of 'o':", s.count('o'))
+print("Find 'tops':", s.find("tops"))
+print("Replace:", s.replace("tops", "Tops"))
+print("Split:", s.split())
+
+s1 = s.split()
+print("Join:", "-".join(s1))
+
+print("Starts with hello:", s.startswith("hello"))
+print("Ends with :", s.endswith("es"))
+
+s2 = "   hello tops technologies"
+print("Strip:", s2.strip())
+print("Lstrip:", s2.lstrip())
+print("Rstrip:", s2.rstrip())
+
+print("Index of 'tops':", s.index("tops"))
+print("Isalpha:", s.isalpha())
+print("Isdigit:", s.isdigit())
+print("Isalnum:", s.isalnum())
