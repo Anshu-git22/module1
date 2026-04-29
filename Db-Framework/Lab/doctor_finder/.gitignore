@@ -1,0 +1,67 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ========================
+# Virtual Environment
+# ========================
+venv/
+env/
+myvenv/
+.venv/
+
+# ========================
+# Django
+# ========================
+*.log
+*.pot
+*.pyc
+
+# Database
+db.sqlite3
+db.sqlite3-journal
+
+# Media files (user uploads)
+media/
+
+# Collected static files
+staticfiles/
+
+# ========================
+# Environment variables
+# ========================
+.env
+
+# ========================
+# IDE / Editor
+# ========================
+.vscode/
+.idea/
+
+# ========================
+# OS Files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Migrations (optional)
+# ========================
+# */migrations/*
+# !*/migrations/__init__.py
+
+# ========================
+# Testing / Coverage
+# ========================
+.coverage
+htmlcov/
+
+# ========================
+# Temporary files
+# ========================
+*.swp
+*.tmp

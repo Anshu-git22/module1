@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="p-5 bg-light rounded text-center">
+        <h1 class="fw-bold">Welcome to Doctor Finder</h1>
+        <p class="lead">Find trusted doctors near you easily.</p>
+        <a href="{% url 'doctors' %}" class="btn btn-primary">View Doctors</a>
+    </div>
+</div>
+{% endblock %}

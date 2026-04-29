@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+env/
+myvenv/
+.venv/
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Static files (if collected)
+staticfiles/
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Migrations (optional - if you want to ignore)
+# */migrations/*
+# !*/migrations/__init__.py
+
+# Node modules (if React used inside project)
+node_modules/
+
+# Coverage / testing
+.coverage
+htmlcov/
+
+# Temporary files
+*.swp
+*.tmp

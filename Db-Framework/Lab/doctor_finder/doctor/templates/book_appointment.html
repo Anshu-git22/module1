@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Book Appointment</h2>
+
+    {% if msg %}
+        <div class="alert alert-success">{{ msg }}</div>
+    {% endif %}
+
+    <div class="card p-4 shadow">
+        <h5>{{ doctor.name }}</h5>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <input type="text" name="patient_name" class="form-control mb-3" placeholder="Patient Name">
+            <input type="email" name="email" class="form-control mb-3" placeholder="Email">
+            <input type="text" name="mobile" class="form-control mb-3" placeholder="Mobile">
+            <input type="date" name="date" class="form-control mb-3">
+            <input type="time" name="time" class="form-control mb-3">
+            <textarea name="message" class="form-control mb-3" placeholder="Message"></textarea>
+
+            <button class="btn btn-success">Confirm Appointment</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between mb-4">
+        <h2>Doctors</h2>
+        <a href="{% url 'doctor_add' %}" class="btn btn-success">Add Doctor</a>
+    </div>
+
+    <div class="row">
+        {% for doctor in doctors %}
+        <div class="col-md-4" id="doctor{{ doctor.id }}">
+            <div class="card shadow mb-4">
+
+                {% if doctor.image %}
+                    <img src="{{ doctor.image.url }}" class="card-img-top" style="height:250px; object-fit:cover;">
+                {% endif %}
+
+                <div class="card-body text-center">
+                    <h5>{{ doctor.name }}</h5>
+                    <p>{{ doctor.speciality }}</p>
+                    <p>Experience: {{ doctor.experience }}</p>
+                    <p>Fees: ₹{{ doctor.fees }}</p>
+                    <p>Availability: {{ doctor.availability }}</p>
+
+                    <a href="{% url 'book_appointment' doctor.id %}" class="btn btn-primary btn-sm">Book</a>
+                    <a href="{% url 'doctor_edit' doctor.id %}" class="btn btn-warning btn-sm">Edit</a>
+                    <button onclick="deleteDoctor({{ doctor.id }})" class="btn btn-danger btn-sm">Delete</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+function deleteDoctor(id) {
+    fetch('/doctor-delete/' + id + '/')
+    .then(response => response.json())
+    .then(data => {
+        if(data.status == 'deleted') {
+            document.getElementById('doctor' + id).remove();
+        }
+    });
+}
+</script>
+{% endblock %}

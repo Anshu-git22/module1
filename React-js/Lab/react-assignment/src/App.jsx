@@ -10,6 +10,8 @@ import FruitList from './modules/Module7_Lists/FruitList'
 import UserList from './modules/Module7_Lists/UserList'
 import FormData from './modules/Module8_Forms/FormData'
 import FormValidation from './modules/Module8_Forms/FormValidation'
+import FetchUsers from './modules/Module9_lifecycle methods/FetchUsers'
+import LifecycleDemo from './modules/Module9_lifecycle methods/LifecycleDemo'
 
 function App() {
   return (
@@ -43,6 +45,10 @@ function App() {
       {/* Forms */}
       <FormData />
       <FormValidation /> 
+
+      {/* LIfe cycle methods */}
+      <FetchUsers />
+      <LifecycleDemo />
     </div>
   )
 }
